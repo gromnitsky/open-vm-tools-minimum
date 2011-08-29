@@ -24,7 +24,7 @@ WRKSRC=			${WRKDIR}/open-vm-tools-${RELEASE_DATE}-${BUILD_VER}
 GNU_CONFIGURE=		yes
 USE_LDCONFIG=		yes
 
-CONFIGURE_ARGS+=	--without-procps --sysconfdir=${LOCALBASE}/etc
+CONFIGURE_ARGS+=	--without-icu --sysconfdir=${LOCALBASE}/etc
 .if defined(WITHOUT_X11)
 LIB_DEPENDS+=		glib-2.0:${PORTSDIR}/devel/glib20
 CONFIGURE_ARGS+=	--without-x --without-gtk2 --without-gtkmm
