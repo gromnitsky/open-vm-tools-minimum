@@ -1,0 +1,12 @@
+--- hgfsmounter/Makefile.in	2011-08-23 00:24:09.000000000 +0300
++++ hgfsmounter/Makefile.in.orig	2011-08-26 21:34:45.000000000 +0300
+@@ -612,9 +612,6 @@
+ @FREEBSD_TRUE@install-exec-hook:
+ @FREEBSD_TRUE@	mv $(DESTDIR)$(sbindir)/mount.vmhgfs \
+ @FREEBSD_TRUE@		$(DESTDIR)$(sbindir)/mount_vmhgfs
+-@FREEBSD_TRUE@	-$(MKDIR_P) $(DESTDIR)/sbin
+-@FREEBSD_TRUE@	-$(LN_S) $(DESTDIR)$(sbindir)/mount_vmhgfs \
+-@FREEBSD_TRUE@		$(DESTDIR)/sbin/mount_vmhgfs &> /dev/null
+ @FREEBSD_TRUE@uninstall-hook:
+ @FREEBSD_TRUE@	rm -f $(DESTDIR)$(sbindir)/mount_vmhgfs
+ @FREEBSD_FALSE@install-exec-hook:

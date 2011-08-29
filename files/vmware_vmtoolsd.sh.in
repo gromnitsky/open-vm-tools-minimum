@@ -1,0 +1,27 @@
+#!/bin/sh
+#
+# PROVIDE: vmware_vmtoolsd
+# REQUIRE: DAEMON
+# BEFORE: LOGIN
+
+. /etc/rc.subr
+
+checkvm_cmd="%%PREFIX%%/bin/vmware-checkvm > /dev/null"
+
+name=vmware_vmtoolsd
+_name=vmtoolsd
+rcvar=`set_rcvar`
+start_precmd="${checkvm_cmd}"
+stop_precmd="${checkvm_cmd}"
+
+command="%%PREFIX%%/bin/${_name}"
+_plugins="%%PREFIX%%/lib/open-vm-tools/plugins/vmsvc"
+_config="%%PREFIX%%/share/vmware-tools/tools.conf"
+required_files="${_plugins}/libtimeSync.so ${_plugins}/libguestInfo.so"
+
+pidfile="/var/run/${_name}.pid"
+
+command_args="-n vmsvc -p ${_plugins} -c ${_config} -b $pidfile"
+
+load_rc_config $name
+run_rc_command "$1"
