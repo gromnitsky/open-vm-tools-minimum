@@ -1,0 +1,24 @@
+--- services/plugins/Makefile.in.orig	2011-08-23 00:24:12.000000000 +0300
++++ services/plugins/Makefile.in	2011-08-30 14:07:22.000000000 +0300
+@@ -82,8 +82,8 @@
+ 	distdir
+ ETAGS = etags
+ CTAGS = ctags
+-DIST_SUBDIRS = desktopEvents dndcp guestInfo hgfsServer powerOps \
+-	resolutionSet timeSync unity vix vmbackup
++DIST_SUBDIRS = desktopEvents dndcp guestInfo powerOps \
++	timeSync unity vmbackup
+ DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+ am__relativize = \
+   dir0=`pwd`; \
+@@ -303,8 +303,8 @@
+ top_build_prefix = @top_build_prefix@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+-SUBDIRS = $(am__append_1) $(am__append_2) guestInfo hgfsServer \
+-	powerOps $(am__append_3) timeSync $(am__append_4) vix vmbackup
++SUBDIRS = $(am__append_1) $(am__append_2) guestInfo \
++	powerOps $(am__append_3) timeSync $(am__append_4) vmbackup
+ all: all-recursive
+ 
+ .SUFFIXES:

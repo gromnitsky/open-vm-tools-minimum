@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# PROVIDE: vmware_vmtoolsd
+# PROVIDE: vmware_vmtoolsd_vmsvc
 # REQUIRE: DAEMON
 # BEFORE: LOGIN
 
@@ -8,7 +8,7 @@
 
 checkvm_cmd="%%PREFIX%%/bin/vmware-checkvm > /dev/null"
 
-name=vmware_vmtoolsd
+name=vmware_vmtoolsd_vmsvc
 _name=vmtoolsd
 rcvar=`set_rcvar`
 start_precmd="${checkvm_cmd}"

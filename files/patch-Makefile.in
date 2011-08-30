@@ -1,0 +1,34 @@
+--- Makefile.in.orig	2011-08-30 13:00:37.000000000 +0300
++++ Makefile.in	2011-08-30 13:08:46.000000000 +0300
+@@ -53,10 +53,6 @@
+ POST_UNINSTALL = :
+ build_triplet = @build@
+ host_triplet = @host@
+-@BUILD_HGFSMOUNTER_TRUE@am__append_1 = hgfsmounter
+-@HAVE_X11_TRUE@am__append_2 = vmware-user-suid-wrapper
+-@HAVE_FUSE_TRUE@am__append_3 = vmblock-fuse
+-@LINUX_FALSE@am__append_4 = vmblockmounter
+ @ENABLE_TESTS_TRUE@am__append_5 = tests
+ @WITH_KERNEL_MODULES_TRUE@am__append_6 = modules
+ subdir = .
+@@ -94,9 +90,9 @@
+ 	distdir dist dist-all distcheck
+ ETAGS = etags
+ CTAGS = ctags
+-DIST_SUBDIRS = lib libvmtools libhgfs hgfsclient hgfsmounter checkvm \
++DIST_SUBDIRS = lib libvmtools checkvm \
+ 	libguestlib rpctool scripts services toolbox \
+-	vmware-user-suid-wrapper vmblock-fuse vmblockmounter xferlogs \
++	xferlogs \
+ 	tests modules docs
+ DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+ distdir = $(PACKAGE)-$(VERSION)
+@@ -331,7 +327,7 @@
+ # These flags get passed to aclocal when autoreconf calls it, and tell aclocal
+ # that all of our macros are in the 'm4' subdirectory.
+ ACLOCAL_AMFLAGS = -I m4
+-SUBDIRS = lib libvmtools libhgfs hgfsclient $(am__append_1) checkvm \
++SUBDIRS = lib libvmtools $(am__append_1) checkvm \
+ 	libguestlib rpctool scripts services toolbox $(am__append_2) \
+ 	$(am__append_3) $(am__append_4) xferlogs $(am__append_5) \
+ 	$(am__append_6) docs

@@ -2,35 +2,21 @@ lib/libvmtools.so.0
 lib/libvmtools.so
 lib/libvmtools.la
 lib/libvmtools.a
-lib/libhgfs.so.0
-lib/libhgfs.so
-lib/libhgfs.la
-lib/libhgfs.a
 lib/libguestlib.so.0
 lib/libguestlib.so
 lib/libguestlib.la
 lib/libguestlib.a
 %%X11%%lib/open-vm-tools/plugins/vmusr/libdesktopEvents.so
 %%X11%%lib/open-vm-tools/plugins/vmusr/libdndcp.so
-%%X11%%lib/open-vm-tools/plugins/vmusr/libresolutionSet.so
 lib/open-vm-tools/plugins/vmsvc/libguestInfo.so
 lib/open-vm-tools/plugins/vmsvc/libpowerOps.so
 lib/open-vm-tools/plugins/vmsvc/libtimeSync.so
 lib/open-vm-tools/plugins/vmsvc/libvmbackup.so
-lib/open-vm-tools/plugins/common/libhgfsServer.so
-lib/open-vm-tools/plugins/common/libhgfsServer.la
-lib/open-vm-tools/plugins/common/libvix.so
-lib/open-vm-tools/plugins/common/libvix.la
-bin/vmware-hgfsclient
 bin/vmware-checkvm
 bin/vmware-rpctool
 bin/vmtoolsd
 bin/vmware-toolbox-cmd
-%%X11%%bin/vmware-user-suid-wrapper
-%%FUSE%%bin/vmware-vmblock-fuse
 bin/vmware-xferlogs
-sbin/mount_vmhgfs
-sbin/mount_vmblock
 include/vmGuestLib/includeCheck.h
 include/vmGuestLib/vmGuestLib.h
 include/vmGuestLib/vmSessionId.h
@@ -42,41 +28,15 @@ share/vmware-tools/poweron-vm-default
 share/vmware-tools/poweroff-vm-default
 share/vmware-tools/suspend-vm-default
 share/vmware-tools/resume-vm-default
-share/vmware-tools/scripts/vmware
 share/vmware-tools/scripts/vmware/network
-share/open-vm-tools/messages/de/vmtoolsd.vmsg
-share/open-vm-tools/messages/de/toolboxcmd.vmsg
-share/open-vm-tools/messages/ja/vmtoolsd.vmsg
-share/open-vm-tools/messages/ja/toolboxcmd.vmsg
-share/open-vm-tools/messages/ko/vmtoolsd.vmsg
-share/open-vm-tools/messages/ko/toolboxcmd.vmsg
-share/open-vm-tools/messages/zh_CN/toolboxcmd.vmsg
 
-lib/vmware-tools/modules/drivers/linker.hints
-lib/vmware-tools/modules/drivers/vmblock.ko
-lib/vmware-tools/modules/drivers/vmhgfs.ko
-lib/vmware-tools/modules/drivers/vmmemctl.ko
-lib/vmware-tools/modules/drivers/vmxnet.ko
-@exec mkdir -p %D/lib/vmware-tools/modules/input
-@exec kldxref %D/lib/vmware-tools/modules/drivers 2>/dev/null || true
-@unexec if test -f %D/lib/vmware-tools/modules/drivers/linker.hints; then rm -f %D/lib/vmware-tools/modules/drivers/linker.hints; fi
-@unexec if test -f %D/share/vmware-tools/tools.conf; then rm -f %D/share/vmware-tools/tools.conf; fi
-@unexec if test -h %D/etc/vmware-tools/plugins; then rm -f %D/etc/vmware-tools/plugins; fi
-
-@dirrm lib/open-vm-tools
-@dirrm lib/open-vm-tools/plugins
 %%X11%%@dirrm lib/open-vm-tools/plugins/vmusr
 @dirrm lib/open-vm-tools/plugins/vmsvc
-@dirrm lib/open-vm-tools/plugins/common
+@dirrm lib/open-vm-tools/plugins
+@dirrm lib/open-vm-tools
+
 @dirrm include/vmGuestLib
-@dirrm share/vmware-tools
+
+@dirrm share/vmware-tools/scripts/vmware
 @dirrm share/vmware-tools/scripts
-@dirrm share/open-vm-tools
-@dirrm share/open-vm-tools/messages
-@dirrm share/open-vm-tools/messages/de
-@dirrm share/open-vm-tools/messages/ja
-@dirrm share/open-vm-tools/messages/ko
-@dirrm share/open-vm-tools/messages/zh_CN
-@dirrm etc
-@dirrm etc/pam.d
-@dirrm etc/vmware-tools
+@dirrm share/vmware-tools

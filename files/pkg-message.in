@@ -1,11 +1,13 @@
 *******************************************************************
-To run the Open Virtual Machine tools at startup, add the following
+To run the open-vm-tools at startup, add the following
 settings to your /etc/rc.conf
 
-vmware_guest_vmblock_enable="YES"
-vmware_guest_vmhgfs_enable="YES"
-vmware_guest_vmmemctl_enable="YES"
-vmware_guest_vmxnet_enable="YES"
-vmware_guestd_enable="YES"
+vmware_guest_vmblock_enable=YES
+vmware_guest_vmhgfs_enable=YES
+vmware_guest_vmmemctl_enable=YES
+vmware_guest_vmxnet_enable=YES
+vmware_guest_vmsvc_enable=YES
 
+For additional info about this setup, see
+http://gromnitsky.blogspot.com/search/label/vmware
 *******************************************************************

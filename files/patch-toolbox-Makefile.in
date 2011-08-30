@@ -1,0 +1,10 @@
+--- toolbox/Makefile.in.orig	2011-08-30 13:15:12.000000000 +0300
++++ toolbox/Makefile.in	2011-08-30 13:15:24.000000000 +0300
+@@ -710,7 +710,6 @@
+ 
+ # Message catalogs.
+ install-data-hook:
+-	@INSTVMSG@ toolboxcmd $(srcdir)/l10n $(DESTDIR)$(datadir)
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
