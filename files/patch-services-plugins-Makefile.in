@@ -1,6 +1,14 @@
---- services/plugins/Makefile.in.orig	2011-08-23 00:24:12.000000000 +0300
-+++ services/plugins/Makefile.in	2011-08-30 14:07:22.000000000 +0300
-@@ -82,8 +82,8 @@
+--- services/plugins/Makefile.in.orig	2011-08-30 15:50:14.000000000 +0300
++++ services/plugins/Makefile.in	2011-08-30 15:52:26.000000000 +0300
+@@ -52,7 +52,6 @@
+ host_triplet = @host@
+ @HAVE_X11_TRUE@am__append_1 = desktopEvents
+ @HAVE_GTKMM_TRUE@am__append_2 = dndcp
+-@HAVE_X11_TRUE@am__append_3 = resolutionSet
+ @ENABLE_UNITY_TRUE@am__append_4 = unity
+ subdir = services/plugins
+ DIST_COMMON = $(srcdir)/Makefile.am $(srcdir)/Makefile.in
+@@ -82,8 +81,8 @@
  	distdir
  ETAGS = etags
  CTAGS = ctags
@@ -11,7 +19,7 @@
  DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  am__relativize = \
    dir0=`pwd`; \
-@@ -303,8 +303,8 @@
+@@ -303,8 +302,8 @@
  top_build_prefix = @top_build_prefix@
  top_builddir = @top_builddir@
  top_srcdir = @top_srcdir@

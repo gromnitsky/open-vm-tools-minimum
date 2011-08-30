@@ -1,5 +1,5 @@
---- Makefile.in.orig	2011-08-30 13:00:37.000000000 +0300
-+++ Makefile.in	2011-08-30 13:08:46.000000000 +0300
+--- Makefile.in.orig	2011-08-30 16:03:07.000000000 +0300
++++ Makefile.in	2011-08-30 16:07:48.000000000 +0300
 @@ -53,10 +53,6 @@
  POST_UNINSTALL = :
  build_triplet = @build@
@@ -16,7 +16,7 @@
  ETAGS = etags
  CTAGS = ctags
 -DIST_SUBDIRS = lib libvmtools libhgfs hgfsclient hgfsmounter checkvm \
-+DIST_SUBDIRS = lib libvmtools checkvm \
++DIST_SUBDIRS = lib libvmtools libhgfs checkvm \
  	libguestlib rpctool scripts services toolbox \
 -	vmware-user-suid-wrapper vmblock-fuse vmblockmounter xferlogs \
 +	xferlogs \
@@ -28,7 +28,7 @@
  # that all of our macros are in the 'm4' subdirectory.
  ACLOCAL_AMFLAGS = -I m4
 -SUBDIRS = lib libvmtools libhgfs hgfsclient $(am__append_1) checkvm \
-+SUBDIRS = lib libvmtools $(am__append_1) checkvm \
++SUBDIRS = lib libvmtools libhgfs $(am__append_1) checkvm \
  	libguestlib rpctool scripts services toolbox $(am__append_2) \
  	$(am__append_3) $(am__append_4) xferlogs $(am__append_5) \
  	$(am__append_6) docs

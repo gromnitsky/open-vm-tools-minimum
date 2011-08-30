@@ -27,7 +27,7 @@ USE_LDCONFIG=		yes
 CONFLICTS=		open-vm-tools-[0-9]* open-vm-tools-nox11-[0-9]* \
 	vmware-guestd[0-9]* vmware-tools[0-9]*
         
-CONFIGURE_ARGS+=	--without-dnet --without-icu --without-gtkmm \
+CONFIGURE_ARGS+=	--without-dnet --without-icu \
 	--without-kernel-modules --without-procps --disable-docs \
 	--without-pam --sysconfdir=${LOCALBASE}/etc
 
@@ -42,6 +42,7 @@ LIB_DEPENDS+=		uriparser.1:${PORTSDIR}/net/uriparser
 .else
 CONFIGURE_ARGS+=	--disable-unity
 .endif
+LIB_DEPENDS+=		gtkmm-2.4:${PORTSDIR}/x11-toolkits/gtkmm24
 CONFIGURE_ARGS+=	--with-x
 CONFIGURE_ENV+=		LDFLAGS="-L${LOCALBASE}/lib" \
 	CPPFLAGS="-I${LOCALBASE}/include"

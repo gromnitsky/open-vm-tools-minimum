@@ -2,6 +2,10 @@ lib/libvmtools.so.0
 lib/libvmtools.so
 lib/libvmtools.la
 lib/libvmtools.a
+lib/libhgfs.so.0
+lib/libhgfs.so
+lib/libhgfs.la
+lib/libhgfs.a
 lib/libguestlib.so.0
 lib/libguestlib.so
 lib/libguestlib.la
