@@ -16,6 +16,8 @@ lib/open-vm-tools/plugins/vmsvc/libguestInfo.so
 lib/open-vm-tools/plugins/vmsvc/libpowerOps.so
 lib/open-vm-tools/plugins/vmsvc/libtimeSync.so
 lib/open-vm-tools/plugins/vmsvc/libvmbackup.so
+lib/open-vm-tools/plugins/common/libvix.so
+lib/open-vm-tools/plugins/common/libvix.la
 bin/vmware-checkvm
 bin/vmware-rpctool
 bin/vmtoolsd
@@ -36,6 +38,7 @@ share/vmware-tools/scripts/vmware/network
 
 %%X11%%@dirrm lib/open-vm-tools/plugins/vmusr
 @dirrm lib/open-vm-tools/plugins/vmsvc
+@dirrm lib/open-vm-tools/plugins/common
 @dirrm lib/open-vm-tools/plugins
 @dirrm lib/open-vm-tools
 

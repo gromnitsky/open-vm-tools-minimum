@@ -1,3 +1,4 @@
+
 *******************************************************************
 To run the open-vm-tools at startup, add the following
 settings to your /etc/rc.conf:
@@ -11,3 +12,4 @@ vmtoolsd -n vmusr &
 For additional info about this setup, see
 http://gromnitsky.blogspot.com/search/label/vmware
 *******************************************************************
+
