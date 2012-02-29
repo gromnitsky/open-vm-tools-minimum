@@ -1,30 +1,30 @@
---- services/plugins/Makefile.in.orig	2011-08-23 00:24:12.000000000 +0300
-+++ services/plugins/Makefile.in	2011-08-31 18:18:19.000000000 +0300
+--- services/plugins/Makefile.in.orig	2011-12-22 02:56:36.000000000 +0200
++++ services/plugins/Makefile.in	2012-02-29 21:26:15.000000000 +0200
 @@ -52,7 +52,6 @@
  host_triplet = @host@
  @HAVE_X11_TRUE@am__append_1 = desktopEvents
  @HAVE_GTKMM_TRUE@am__append_2 = dndcp
 -@HAVE_X11_TRUE@am__append_3 = resolutionSet
- @ENABLE_UNITY_TRUE@am__append_4 = unity
  subdir = services/plugins
  DIST_COMMON = $(srcdir)/Makefile.am $(srcdir)/Makefile.in
-@@ -82,8 +81,8 @@
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+@@ -81,8 +80,8 @@
  	distdir
  ETAGS = etags
  CTAGS = ctags
 -DIST_SUBDIRS = desktopEvents dndcp guestInfo hgfsServer powerOps \
--	resolutionSet timeSync unity vix vmbackup
+-	resolutionSet timeSync vix vmbackup
 +DIST_SUBDIRS = desktopEvents dndcp guestInfo powerOps \
-+	timeSync unity vix vmbackup
++	timeSync vix vmbackup
  DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  am__relativize = \
    dir0=`pwd`; \
-@@ -303,7 +302,7 @@
+@@ -294,7 +293,7 @@
  top_build_prefix = @top_build_prefix@
  top_builddir = @top_builddir@
  top_srcdir = @top_srcdir@
 -SUBDIRS = $(am__append_1) $(am__append_2) guestInfo hgfsServer \
 +SUBDIRS = $(am__append_1) $(am__append_2) guestInfo \
- 	powerOps $(am__append_3) timeSync $(am__append_4) vix vmbackup
+ 	powerOps $(am__append_3) timeSync vix vmbackup
  all: all-recursive
  
