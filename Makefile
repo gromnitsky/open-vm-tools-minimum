@@ -6,7 +6,7 @@ PORTNAME=		open-vm-tools-minimum
 PORTVERSION=		${BUILD_VER}
 PORTREVISION=		1
 CATEGORIES=		emulators
-MASTER_SITES=		SF/open-vm-tools/${PORTNAME}/${RELEASE_DATE}
+MASTER_SITES=		SF/open-vm-tools/open-vm-tools/${RELEASE_DATE}
 DISTNAME=		open-vm-tools-${RELEASE_DATE}-${BUILD_VER}
 
 MAINTAINER=		alexander.gromnitsky@gmail.com
@@ -15,8 +15,8 @@ COMMENT=		Open VMware tools for FreeBSD VMware guests (a light version)
 LICENSE=		LGPL21
 LICENSE_FILE=		${WRKSRC}/COPYING
 
-RELEASE_DATE=		2011.12.20
-BUILD_VER=		562307
+RELEASE_DATE=		2012.03.13
+BUILD_VER=		651368
 
 WRKSRC=			${WRKDIR}/open-vm-tools-${RELEASE_DATE}-${BUILD_VER}
 GNU_CONFIGURE=		yes
